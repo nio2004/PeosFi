@@ -77,7 +77,7 @@ export default function Header() {
       >
         {/* <Logo width={120} height={120} /> */}
         <h4 className=" font-bold text-2xl my-8">
-        Circle Fund
+        PeosFi
       </h4>
       </Link>
       <div className="flex gap-3">
