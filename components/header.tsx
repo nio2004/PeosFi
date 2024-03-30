@@ -42,15 +42,17 @@ export default function Header() {
   }
   useEffect(() => {
     // console.log('test1')
+    
     const fetchData = async () => {
       try {
         console.log(address);
         const response = await fetch("/api/graphdb?addr="+address);
+        console.log(response);
         if (!response.ok) {
           throw new Error(`Error fetching data: ${response.statusText}`);
         }
         const data = await response.json();
-        console.log(data.savedUsers.length);
+        console.log(data);
         if(data.savedUsers.length == 0){
           if (!isInitialRender.current && ready) {
             router.push("http://localhost:3000");
@@ -60,8 +62,9 @@ export default function Header() {
         console.log(err.message);
       }
     };
-
-    fetchData();
+    if(address != undefined){
+      fetchData();
+    }
     // if (isInitialRender.current) {
     //   console.log('test3')
     //   // if(count > 1)
@@ -70,25 +73,26 @@ export default function Header() {
     // }
   }, [ready]); 
   return (
-    <div className="flex p-3 px-32 text-white w-full justify-between items-center">
+    <div className="flex ml-52 mt-10 text-white w-full first-letter:justify-between items-center">
       <Link
         href="/"
         className="flex items-center space-x-2 font-bold w-44 text-xl"
       >
         {/* <Logo width={120} height={120} /> */}
-        <h4 className=" font-bold text-2xl my-8">
+        <h4 className=" font-bold text-4xl my-8">
         PeosFi
       </h4>
       </Link>
       <div className="flex gap-3">
-        <Button variant={"ghost"} onClick={() => router.push("/social")}>
+        <Button className="text-xl" variant={"ghost"} onClick={() => router.push("/social")}>
           Social
         </Button>
-        <Button variant={"ghost"} onClick={() => router.push("/loans")}>
+        <Button className="text-xl" variant={"ghost"} onClick={() => router.push("/loans")}>
           Loan
         </Button>
         <Button
           variant={"ghost"}
+          className="text-xl"
           onClick={() => router.push("/profile/" + address)}
         >
           Profile

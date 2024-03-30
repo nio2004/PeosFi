@@ -125,8 +125,9 @@ export default function Social() {
     <div>
       <LensProvider config={lensConfig}>
         <main className="flex min-h-screen flex-col items-center">
+      
           {/* {activeLensProfile && <LensPost profile={activeLensProfile} />} */}
-          <div className="bg-bg w-6/12 rounded-2xl p-10 max-h-[600px] overflow-y-auto">
+          <div className="bg-bg rounded-2xl p-10 max-h-[600px] overflow-y-auto">
             {lensFeed.map((feedItem, i) => (
               <div
                 key={i}
@@ -163,9 +164,11 @@ export default function Social() {
                 //   setActiveLensProfile={setActiveLensProfile}
               />
               {/* )} */}
-              <div className="flex flex-col gap-8">
+              <div className="flex flex-col w-full gap-8 justify-center items-center">
+              
                 {profile && (
               <div className="flex justify-between gap-10 items-center flex-wrap ">
+                
                 <div className=" glass px-10 py-5 flex justify-between rounded-[50px] items-center text-white">
                   <div>
                     <h1 className="m-0 p-0 flex items-center mb-1">
@@ -190,9 +193,10 @@ export default function Social() {
                         </svg>
                       )}
                     </h1>
-                    <p className="m-0 p-0 flex items-center text-sm">
+                    <p className="m-0 p-0 flex flex-col gap-4 items-center text-sm">
                       <p className="mr-8">{profile?.identity}</p>
-                      {params.address.toLowerCase() ===
+                      <p>Need Some Crypto asap ! </p>
+                      {/* {params.address.toLowerCase() ===
                         "0x0f060c6cf1E11C5f5dED60932f9CadCAcA24E49C".toLowerCase() && (
                         <TooltipProvider>
                           <Tooltip>
@@ -210,7 +214,7 @@ export default function Social() {
                             </TooltipContent>
                           </Tooltip>
                         </TooltipProvider>
-                      )}
+                      )} */}
                     </p>
                   </div>
                   <div className="text-center">
@@ -225,6 +229,7 @@ export default function Social() {
             )}
                 {profile && (
               <div className="flex justify-between gap-10 items-center flex-wrap ">
+                
                 <div className=" glass px-10 py-5 flex justify-between rounded-[50px] items-center text-white">
                   <div>
                     <h1 className="m-0 p-0 flex items-center mb-1">
@@ -249,9 +254,10 @@ export default function Social() {
                         </svg>
                       )}
                     </h1>
-                    <p className="m-0 p-0 flex items-center text-sm">
+                    <p className="m-0 p-0 flex flex-col gap-4 items-center text-sm">
                       <p className="mr-8">{profile?.identity}</p>
-                      {params.address.toLowerCase() ===
+                      <p> Hey wanted some Crypto! </p>
+                      {/* {params.address.toLowerCase() ===
                         "0x0f060c6cf1E11C5f5dED60932f9CadCAcA24E49C".toLowerCase() && (
                         <TooltipProvider>
                           <Tooltip>
@@ -269,7 +275,7 @@ export default function Social() {
                             </TooltipContent>
                           </Tooltip>
                         </TooltipProvider>
-                      )}
+                      )} */}
                     </p>
                   </div>
                   <div className="text-center">
@@ -282,6 +288,9 @@ export default function Social() {
                 </div>
               </div>
             )}
+                <div className="glass p-5 w-1/3 text-lg rounded-xl h-20 flex items-center justify-center transition duration-300 ease-in-out hover:bg-opacity-80 hover:bg-gray-900" role="button">
+                  Create Post with Gemini
+                </div>
             </div>
             </p>
           </div>
