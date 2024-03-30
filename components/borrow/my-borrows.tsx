@@ -25,11 +25,11 @@ export default function MyBorrows({
   // 0 ongoin, 1 repaid, 2 defaulted
   const borrows = [
     {
-      amount: 35,
+      amount: 5,
       duration: 1,
       interest: 20,
       daysLeft: 1,
-      owed: 35 * 1.2,
+      owed: 5 * 1.2,
       loanId: 0,
     },
   ];
