@@ -38,11 +38,11 @@ export const getContract = () => {
 
 export const contractChains = [
   {
-    chainName: "scrollSepolia",
-    chainId: 534351,
-    token: "0x57FA0ba64fdBD3961544CbCC3eF3a9CEC0F37654",
-    p2p: "0x9D87c33418Cb365eC3a2149af2b86f538d443b2D",
-    pool: "0x4f01A3e6E4b22D60c39d3030e985dD562782F62B",
+    chainName: "Sepolia",
+    chainId: 11155111,
+    token: "0x27fa57Ee81c091e71D7B12416C72EfF2A2cc70f2",
+    p2p: "0xA9976E07C1e2882533e14e57E6C480A1Df555E18",
+    pool: "0x63bD7E1cFb915fec9467E9c85C66e4cBA9a65aAF",
   },
   {
     chainName: "baseGoerli",
@@ -134,8 +134,8 @@ const getChainList = () => {
   });
   return chainList;
 };
-export const socialPool: Address = "0xf8986B3DdA96D46375a08d2a6f0F1893ce937360";
-export const p2pLending: Address = "0xd877dfb1a74972C41673D5F72d232C46386Ef5B4";
+export const socialPool: Address = "0x63bD7E1cFb915fec9467E9c85C66e4cBA9a65aAF";
+export const p2pLending: Address = "0xA9976E07C1e2882533e14e57E6C480A1Df555E18";
 export const socialABI = [
   {
     inputs: [
