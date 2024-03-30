@@ -17,7 +17,7 @@ export default function Home() {
     if (ready) {
       // router.push("/loans");
       console.log("pressed");
-      router.push("http://localhost:3000/");
+      router.push("http://localhost:3000/loans");
     }
   };
   // useEffect(() => {
@@ -28,7 +28,7 @@ export default function Home() {
     <main className="flex min-h-[calc(100vh-150px)] flex-col items-center justify-center text-white">
       {/* <Logo width={300} height={300} /> */}
       <h1 className=" font-bold text-8xl my-3 mt-10">
-        Circle Fund
+        PeosFi
       </h1>
       <h1 className="font-semibold text-4xl my-3 mt-10">
         Instant loans with no collaterals
