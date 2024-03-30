@@ -86,7 +86,9 @@ export default function BorrowWidget({
       ];
       const apiSignature = "0x";
       const apiNonce = 123;
-      const tx = await contract.borrow(loanTerms, apiSignature, apiNonce);
+      const tx = await contract.borrow(loanTerms, apiSignature, apiNonce, {
+        gasLimit: 5000000,
+      });
       console.log({ tx });
       await new Promise((resolve) => setTimeout(resolve, 5000));
       // const txResponse = await signer.sendTransaction(tx);
