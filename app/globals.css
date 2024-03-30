@@ -61,8 +61,8 @@
   
     /* Define two radial gradients with different positions */
     background-image:
-      radial-gradient(circle at center, rgba(255, 0, 0, 0.5), transparent 500px),
-      radial-gradient(circle at center, rgba(255, 127, 0, 0.5), transparent 500px);
+      radial-gradient(circle at center, #8B93FF, transparent 500px),
+      radial-gradient(circle at center, #FF71CD, transparent 500px);
   
     /* Apply background position for each gradient */
     background-position:
