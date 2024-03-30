@@ -246,7 +246,7 @@ export default function Profile({ params }: { params: { address: string } }) {
           )}
           {profile && (
             <div className="flex justify-between gap-10 items-center flex-wrap ">
-              <div className="w-full glass px-10 py-5 flex justify-between rounded-[50px] items-center text-white">
+              <div className=" glass px-10 py-5 flex justify-between rounded-[50px] items-center text-white">
                 <div>
                   <h1 className="m-0 p-0 flex items-center mb-1">
                     {profile?.ENS}
