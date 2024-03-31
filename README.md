@@ -4,6 +4,10 @@
 
 This project is a Next.js, TailwindCSS, TypeScript, Express, and Web3 application. It is designed to provide [Describe functionality here].
 
+## SnapShot from the project
+![image](https://github.com/nio2004/PeosFi/assets/110836015/a4e1bdf4-3df0-4b74-b61a-0b9b8800b2d8)
+![image](https://github.com/nio2004/PeosFi/assets/110836015/1f086c83-96b9-498d-931c-f325865b7d06)
+
 ## Table of Contents
 
 - [Overview](#overview)
