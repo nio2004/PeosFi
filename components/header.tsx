@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { Button } from "./ui/button";
+import React, { useState } from 'react';
 import { ChevronDown, Loader2 } from "lucide-react";
 import {
   DropdownMenu,
@@ -15,6 +16,7 @@ import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { useToast } from "./ui/use-toast";
 import Logo from "./logo";
+import GlassCard from "./ui/card";
 import { useAccount } from "wagmi";
 import { useEffect, useRef } from "react";
 export default function Header() {
@@ -37,7 +39,15 @@ export default function Header() {
   //   isInitialRender.current = true;
   
   // }
+  const [showCard, setShowCard] = useState(false);
+  const [connectWallet, setConnectWallet] = useState(false);
+  const openCard = () => setShowCard(true);
+  const closeCard = () => {
+    setShowCard(false);
+    setConnectWallet(true);
+  };
   const clickhandle = () => {
+    openCard();
     isInitialRender.current = false;
   }
   useEffect(() => {
@@ -97,6 +107,11 @@ export default function Header() {
         >
           Profile
         </Button>
+        <div>
+      {showCard && <GlassCard onClose={closeCard} />}
+      
+
+    </div>
       </div>
 
       <Button variant="link">

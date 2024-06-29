@@ -43,7 +43,7 @@ const { chains, publicClient, webSocketPublicClient } = configureChains(
 );
 
 const { connectors } = getDefaultWallets({
-  appName: "Zero Fi",
+  appName: "Peos Fi",
   projectId: "4e86000476eeab593dbf69e0262c5557",
   chains,
 });

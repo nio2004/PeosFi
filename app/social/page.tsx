@@ -1,5 +1,6 @@
 "use client";
 import { LensLoginButton } from "@/components/LensLoginButton";
+import {run} from "./gemini"
 import {
   LensProvider,
   FeedItem,
@@ -121,6 +122,18 @@ export default function Social() {
       setScore("0");
     }
   };
+
+  const OtherPage: React.FC = () => {
+    const handleButtonClick = async () => {
+      try {
+        const generatedPost = await run();
+        console.log("Generated Post:", generatedPost);
+        // Handle the generated post as needed
+      } catch (error) {
+        console.error("Error generating post:", error);
+      }
+    };}
+  
   return (
     <div>
       <LensProvider config={lensConfig}>
